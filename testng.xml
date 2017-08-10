@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+  	<parameter name="url" value = "http://10.100.20.245:7080/regprov"/>
+	<parameter name="driverPath"  value="/usr/local/share/chromedriver"/>
+
+  	<parameter name="correo" value = "mantogris@test.com" />   <!-- persona fisica-->
+  	<parameter name="contrasena" value="password" />
+  	<parameter name="correoMoral" value = "test2@uttab.edu.mx" />       <!--persona moral-->
+  	<parameter name="correoMC" value = "pedrohernandez5@dominio.com" /> <!--Modificar contraseña-->
+  	<parameter name="contrasenaMC" value="123456" />
+   	<parameter name="logo" value="/home/paty/Imágenes/logosRegprov/images.png"/>
+   	<parameter name="docPDF" value="/home/paty/Documentos/PDFPRUEBA/DocumentoCinco.pdf"/>
+   	<parameter name="rfcPF" value="PRUE800101F00"/>
+   	<parameter name="correoPF" value="amorales11@uttab.edu.mx"/>
+   	<parameter name="rfcPM" value="EMP700101P17"/>
+   	<parameter name="correoPM" value="amofr141@gmail.com"/>
+   	<parameter name="rfcBorrarT" value="ABCD800101A00"/>
+   	<parameter name="correoBorrarT" value="prueba100@test.com"/>
+   	<parameter name="rfcBuscarBS" value="PRUE800101A00"/>
+   	<parameter name="correoBuscarBS" value="correo212@test.com"/>	
+
+	<test name = "admin.Test1">
+		<classes>
+			<class name="admin.ConsolaBasedeDatos"/>    
+		</classes>
+	</test>
+		<test name = "admin.Test2">
+		<classes>
+			<class name="admin.ConsolaScripting"/> 
+		</classes>
+	</test>
+	<test name = "admin.Test3">
+		<classes>
+			<class name="admin.Login"/>
+		</classes>
+	</test>
+	<test name = "admin.Test4">
+		<classes>
+			<class name="admin.Roles"/>  
+		</classes>
+	</test>
+	<test name = "admin.Test5">
+		<classes>
+			<class name="admin.TableroProcesos"/>    
+		</classes>
+	</test>
+	<test name = "admin.Test6">
+		<classes>
+			<class name="admin.UsuariosInternos"/>     
+		</classes>
+	</test>
+	
+	
+	<test name = "busquedaPub.Test7">
+		<classes>
+      		<class name="busquedaPub.DescargarFichaProvBusqElec"/>    
+		</classes>
+	</test>
+	<test name = "busquedaPub.Test8">
+		<classes>
+      		<class name="busquedaPub.DescargarFichaProvBusqHidro"/>   
+		</classes>
+	</test>	
+	<test name = "busquedaPub.Test9">
+		<classes>
+      		<class name="busquedaPub.DetalleElectricaPaginador"/>
+		</classes>
+	</test>	
+	<test name = "busquedaPub.Test10">
+		<classes>
+      		<class name="busquedaPub.DetalleHidrocarburos"/>     
+		</classes>
+	</test>	
+	<test name = "busquedaPub.Test11">
+		<classes>
+      		<class name="busquedaPub.FiltrosElectrica"/>  
+		</classes>
+	</test>	
+	<test name = "busquedaPub.Test12">
+		<classes>
+  	  		<class name="busquedaPub.FiltrosHidrocarburos"/>  
+		</classes>
+	</test>		
+	<test name = "busquedaPub.Test13">
+		<classes>
+      		<class name="busquedaPub.PaginadorBusquedaElec"/>  
+		</classes>
+	</test>		
+	<test name = "busquedaPub.Test14">
+		<classes>
+      		<class name="busquedaPub.PaginadorBusquedaHidro"/>     
+		</classes>
+	</test>		
+	
+	
+	<test name = "contrasena.Test15">
+		<classes>
+      		<class name="contrasena.ModificarContrasena"/>   
+		</classes>
+	</test>
+	<test name = "contrasena.Test16">
+		<classes> 
+     		<class name="contrasena.RecuperarContrasena"/>   
+		</classes>
+	</test>
+		
+		
+	<test name = "editar.Test17">
+		<classes> 
+     		<class name="editar.AgregarBienServicio"/>
+		</classes>
+	</test>
+	<test name = "editar.Test18">
+		<classes> 
+      		<class name="editar.AgregarDetalle"/>
+		</classes>
+	</test>	
+	<test name = "editar.Test19">
+		<classes> 
+      		<class name="editar.BorrarTelefono"/> 
+		</classes>
+	</test>
+	<test name = "editar.Test20">
+		<classes> 
+      		<class name="editar.BusquedaEdicion"/>
+		</classes>
+	</test>	
+	<test name = "editar.Test21">
+		<classes> 
+      		<class name="editar.CertificacionesNecesidadesNinguna"/>    
+		</classes>
+	</test>	
+	<test name = "editar.Test22">
+		<classes>   
+	 		<class name="editar.DescargarCatalogos"/>   
+		</classes>
+	</test>	
+	<test name = "editar.Test23">
+		<classes> 
+	  		<class name="editar.EliminarBienServicio"/> 
+		</classes>
+	</test>	
+	<test name = "editar.Test24">
+		<classes> 
+      		<class name="editar.ModificarDatosPersFis"/> 
+		</classes>
+	</test>	
+	<test name = "editar.Test25">
+		<classes> 
+      		<class name="editar.ModificarDatosPersMor"/>  
+		</classes>
+	</test>	
+	<test name = "editar.Test26">
+		<classes> 
+      		<class name="editar.NecesidadesDesarrollo"/> 
+		</classes>
+	</test>	
+	<test name = "editar.Test27">
+		<classes> 
+      		<class name="editar.OpcionRegresarMigas"/>  
+		</classes>
+	</test>	
+	
+	
+	<test name = "registrar.Test28">
+		<classes> 
+      		<class name="registrar.BorrarTelefono" />  
+		</classes>
+	</test>
+	<test name = "registrar.Test29">
+		<classes> 
+      		<class name="registrar.BuscarBienServicio"/> 
+		</classes>
+	</test>
+	<test name = "registrar.Test30">
+		<classes>  
+     		<class name="registrar.RegistroPersonaFis" />       
+		</classes>
+	</test>
+	<test name = "registrar.Test31">
+		<classes>  
+     		<class name="registrar.RegistroPersonaMoral" />       
+		</classes>
+	</test>
+	
+</suite> <!-- Suite -->
